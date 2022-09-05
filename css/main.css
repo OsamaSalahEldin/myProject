@@ -1,0 +1,363 @@
+*{
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+}
+
+body,html{
+	font-size:16px;	
+  direction:rtl;
+		font-family: var(--fonts-banner);
+}
+*,:after,:before {
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style:none;
+}
+
+@font-face{
+	font-family:"Mon";
+	src:url(../fonts/Mon.otf);
+}
+@font-face{
+	font-family:"Mon300";
+	src:url(../fonts/Mon300.otf);
+}
+
+:root{
+
+--bg-color-banner:#000000;
+--fonts-banner:'Cairo', sans-serif;
+--color-link-banner :#ff1053;
+/*--main-gradient:linear-gradient(45deg, #ff656d 8%, #ae38ec 50%, #4f66ff 90%);*/
+--main-gradient:linear-gradient(45deg, #fe802d 8%, #fe0840 50%, #ac0bd9 90%);
+}
+/* start reset container */
+ .container{
+		margin-right:20px;
+		margin-left:20px;
+	}
+
+	@media (min-width: 576px) {
+  .container{
+			width:560px;
+   margin-right:auto;
+			margin-left:auto;
+		}
+	}
+	/* Medium devices (tablets, 768px and up) */
+	@media (min-width: 768px) {
+		.container{
+			width:760px;
+   margin-right:auto;
+			margin-left:auto;
+		}
+	}
+	/* Large devices (desktops, 992px and up) */
+	@media (min-width: 992px) {
+		.container{
+			width:980px;
+   margin-right:auto;
+			margin-left:auto;
+		}
+	}
+	/* Extra large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {
+		.container{
+			width:1100px;
+   margin-right:auto;
+			margin-left:auto;
+		}
+	}
+
+/* end reset container */
+
+/* banner start */
+ .banner {
+		min-height:30px;
+		position: fixed;
+		text-align:center;
+		padding:8px 0;
+		position:fixed;
+  background-color: var(--bg-color-banner);
+	 width:100%;
+		font-size:0.85rem;
+  line-height: 1.6;
+		color:#eee;
+  font-family:var(--fonts-banner) ;
+		top:0;
+		z-index: 400;
+	
+	}
+	.link-banner a {
+		color:var(--color-link-banner);
+	} 
+
+	.link-banner a:hover {
+  color: #fe802d ;
+	} 
+
+/* banner end */
+
+/* start header */
+#header-first {
+	position: fixed;
+	top:0;
+	height:6.1vh;
+	width:100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2%;
+ margin-top: 36.16px;
+	z-index: 401;
+	transition: all 0.2s;
+}
+
+/*===================== media screen for header fixed */
+@media(max-width:1000px){
+			
+	#header-first {
+	
+		margin-top: 33.92px;
+	
+	}
+
+	.banner {
+	
+		font-size:0.70rem;
+
+	}
+
+}
+   @media(max-width:499px){
+			
+				#header-first {
+				margin-top:51.84px;
+				font-size:0.70rem;
+				}
+				.banner {
+				
+					font-size:0.70rem;
+				
+				
+				}
+		
+			}
+			@media(max-width:260px){
+			
+				#header-first {
+				margin-top:69.77px;
+				font-size:0.70rem;
+				}
+				.banner {
+				
+					font-size:0.70rem;
+				
+				
+				}
+		
+			}
+/*===================== media screen for header fixed */
+
+
+#header-first .toggle span{
+	position: relative;
+	display: block;
+	height: 2px;
+	background: #fff;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	transition: .4s all;
+ 
+}
+#header-first .toggle {
+	cursor: pointer;
+	overflow: hidden;
+	pointer-events: all;
+
+}
+
+#header-first .toggle span:first-child{
+    	width: 32px;
+    transition-delay: .2s;
+}
+#header-first .toggle span:nth-child(2){
+   	width: 32px;
+    margin: 6px 0;
+    transition-delay: .1s;
+}
+
+#header-first .toggle span:last-child{
+	width: 22px;
+  transition-delay: 0s;
+}
+/* end header */
+
+/* end animation home after header */
+
+.landing-animation{
+	width:100%;
+	height:88vh;
+ background:var(--main-gradient);
+	display:flex;
+	align-items: center;
+	overflow-y: hidden;
+
+}
+.logo {
+	position: relative;
+	font-size: 0.60rem;
+	width: 16.4vh;
+	color:white;
+	text-align: center;
+	border: 1px solid white;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	padding:3px 0;
+	line-height: 1.2;
+ text-shadow: 1px  1px  2px  rgba(0, 0, 0, 0.562)  , -1px  -1px 2px  rgba(0, 0, 0, 0.562);
+
+}
+
+.infinite{
+	letter-spacing: 3.6px;
+}
+
+.about-company{
+ color:white;
+ 
+}
+.about-company h1{
+font-size:2.1rem;
+line-height: 1.3;
+margin-bottom: 7px;
+font-family:Mon, Sans-serif;
+font-weight: 400;
+
+}
+.about-company p{
+font-family:Mon300, Sans-serif;
+font-weight: 300;
+font-size: 1.1rem;
+line-height: 1.7;
+width:90%;
+}
+
+/* start media screen for h1 , p in landing animation =>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'are you love this website !'  */
+@media(max-width:579px) {
+	.about-company h1{
+		font-size:2rem;
+		line-height:1.3;
+		margin-bottom: 12px;
+		}
+		.about-company p{
+			font-size: 1rem;
+			line-height: 1.7;
+			width:90%;
+			}
+}
+
+/*  end media screen for h1 , p   */
+
+.particles-js-canvas-el{
+	width:100%;
+	max-height:88vh;
+	position: absolute;
+	top:0px;
+	left:0;
+z-index: 7;
+
+}
+body{
+	height:5000px;
+}
+
+
+
+#sectionOne{
+	position:relative;
+	width:100%;
+ height:100%;
+
+}
+
+.custom-shape-divider-bottom-1662274528 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1662274528 svg {
+	position: relative;
+	display: block;
+	width: calc(200% + 1.3px);
+	height: 55px;
+	transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1662274528 .shape-fill {
+	fill: #FFFFFF;
+}
+
+
+@media(max-width:567px){
+	.custom-shape-divider-bottom-1662274528 svg {
+	 width: calc(195% + 1.3px);
+		height: 50px;
+
+	}
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(0deg,#cc4bdd 20%,#e45f8a 75%,#fe7531 100%);
+	-webkit-transition: .3s background-color;
+	transition: .3s background-color;
+}
+
+::-webkit-scrollbar-track {
+	background: #111;
+	border-left: 3px solid #111;
+}
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+#lines{
+	position: absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	background-image:url("/images/شركة\ تطوير\ ويب.svg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+opacity:0.7;
+}
+
+@media(max-width:567px){
+#lines{
+	display:none;
+}
+}
+
+body{
+	overflow-x:hidden;
+}
+/* end animation home after header */
+
+
+
+
+
+
